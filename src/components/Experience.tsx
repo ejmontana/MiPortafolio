@@ -32,15 +32,15 @@ export const Experience: React.FC<ExperienceProps> = ({ title, jobs }) => {
   };
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-20 bg-gray-800">
       <div className="container mx-auto px-6">
         <motion.h2 
-          className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center"
+          className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center text-cyan-400"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <Briefcase className="text-cyan-500" />
+          <Briefcase className="text-cyan-400" />
           {title}
         </motion.h2>
         
@@ -62,10 +62,10 @@ export const Experience: React.FC<ExperienceProps> = ({ title, jobs }) => {
                 key={index}
                 ref={ref}
                 variants={item}
-                className="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+                className="bg-gray-900 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-700"
               >
                 <motion.h3 
-                  className="text-xl font-semibold text-gray-900"
+                  className="text-xl font-semibold text-cyan-400"
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 0.2 }}
@@ -73,7 +73,7 @@ export const Experience: React.FC<ExperienceProps> = ({ title, jobs }) => {
                   {job.role}
                 </motion.h3>
                 <motion.div 
-                  className="text-cyan-600 mb-2"
+                  className="text-cyan-300 mb-2"
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 0.3 }}
@@ -81,7 +81,7 @@ export const Experience: React.FC<ExperienceProps> = ({ title, jobs }) => {
                   {job.company}
                 </motion.div>
                 <motion.div 
-                  className="text-gray-500 text-sm mb-4"
+                  className="text-gray-400 text-sm mb-4"
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 0.4 }}
@@ -89,7 +89,7 @@ export const Experience: React.FC<ExperienceProps> = ({ title, jobs }) => {
                   {job.period}
                 </motion.div>
                 <motion.p 
-                  className="text-gray-600"
+                  className="text-gray-300"
                   initial={{ opacity: 0 }}
                   animate={inView ? { opacity: 1 } : { opacity: 0 }}
                   transition={{ delay: 0.5 }}

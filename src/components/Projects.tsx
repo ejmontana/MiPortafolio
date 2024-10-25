@@ -38,7 +38,7 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
-      className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+      className="bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 border border-gray-700"
     >
       <div className="relative group">
         <img 
@@ -46,14 +46,14 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
           alt={project.title}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div className="p-6">
-        <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        <h3 className="text-xl font-semibold mb-2 text-cyan-400">{project.title}</h3>
+        <p className="text-gray-300 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, index) => (
-            <span key={index} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+            <span key={index} className="bg-gray-700 text-cyan-400 px-3 py-1 rounded-full text-sm">
               {tech}
             </span>
           ))}
@@ -64,7 +64,7 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400"
             >
               <Github size={20} />
               <span className="text-sm">Source</span>
@@ -75,7 +75,7 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
               href={project.appStore}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400"
             >
               <Smartphone size={20} />
               <span className="text-sm">iOS</span>
@@ -86,7 +86,7 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
               href={project.playStore}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900"
+              className="inline-flex items-center gap-2 text-gray-300 hover:text-cyan-400"
             >
               <TabletSmartphone size={20} />
               <span className="text-sm">Android</span>
@@ -94,7 +94,7 @@ const ProjectCard: React.FC<{ project: Project; imageUrl: string; index: number 
           )}
           <a 
             href="#" 
-            className="inline-flex items-center gap-2 text-cyan-500 hover:text-cyan-600 ml-auto"
+            className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 ml-auto"
           >
             {project.viewProject} <ExternalLink size={16} />
           </a>
@@ -123,7 +123,7 @@ export const Projects: React.FC<ProjectsProps> = ({ content }) => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-2xl font-bold mb-8 text-gray-800">{content.professional.title}</h3>
+        <h3 className="text-2xl font-bold mb-8 text-cyan-400">{content.professional.title}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {content.professional.items.map((project, index) => (
             <ProjectCard 
@@ -142,7 +142,7 @@ export const Projects: React.FC<ProjectsProps> = ({ content }) => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h3 className="text-2xl font-bold mb-8 text-gray-800">{content.hobby.title}</h3>
+        <h3 className="text-2xl font-bold mb-8 text-cyan-400">{content.hobby.title}</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {content.hobby.items.map((project, index) => (
             <ProjectCard 

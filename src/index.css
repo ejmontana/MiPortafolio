@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply text-gray-900 leading-normal;
+    @apply bg-gray-900 text-gray-100 leading-normal;
   }
 }
 

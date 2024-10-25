@@ -17,14 +17,14 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-900">
       <LanguageToggle currentLang={lang} onToggle={toggleLanguage} />
       <Hero content={t.hero} />
 
       {/* About Section */}
       <motion.section 
         id="about" 
-        className="py-20 bg-white"
+        className="py-20 bg-gray-800"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -44,16 +44,16 @@ function App() {
             </div>
             <div className="md:w-1/2">
               <motion.h2 
-                className="text-3xl font-bold mb-6 flex items-center gap-2"
+                className="text-3xl font-bold mb-6 flex items-center gap-2 text-cyan-400"
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
               >
-                <User className="text-cyan-500" />
+                <User className="text-cyan-400" />
                 {t.about.title}
               </motion.h2>
               <motion.p 
-                className="text-gray-600 mb-6"
+                className="text-gray-300 mb-6"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -62,7 +62,7 @@ function App() {
                 {t.about.p1}
               </motion.p>
               <motion.p 
-                className="text-gray-600 mb-6"
+                className="text-gray-300 mb-6"
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -76,15 +76,15 @@ function App() {
       </motion.section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gray-50">
+      <section id="skills" className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
           <motion.h2 
-            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center"
+            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center text-cyan-400"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Cpu className="text-cyan-500" />
+            <Cpu className="text-cyan-400" />
             {t.skills.title}
           </motion.h2>
           <Skills categories={t.skills.categories} />
@@ -95,15 +95,15 @@ function App() {
       <Experience title={t.experience.title} jobs={t.experience.jobs} />
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-gray-50">
+      <section id="projects" className="py-20 bg-gray-900">
         <div className="container mx-auto px-6">
           <motion.h2 
-            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center"
+            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center text-cyan-400"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <Code2 className="text-cyan-500" />
+            <Code2 className="text-cyan-400" />
             {t.projects.title}
           </motion.h2>
           <Projects content={t.projects} />
@@ -113,51 +113,51 @@ function App() {
       {/* Contact Section */}
       <motion.section 
         id="contact" 
-        className="py-20 bg-white"
+        className="py-20 bg-gray-800"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
       >
         <div className="container mx-auto px-6">
           <motion.h2 
-            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center"
+            className="text-3xl font-bold mb-12 text-center flex items-center gap-2 justify-center text-cyan-400"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <Send className="text-cyan-500" />
+            <Send className="text-cyan-400" />
             {t.contact.title}
           </motion.h2>
           <div className="max-w-xl mx-auto">
             <div className="flex flex-col space-y-4">
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
+                className="flex items-center gap-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
                 whileHover={{ scale: 1.02 }}
               >
-                <Mail className="text-cyan-500" />
+                <Mail className="text-cyan-400" />
                 <div>
-                  <h3 className="font-medium">{t.contact.email}</h3>
-                  <p className="text-gray-600">contact@endersonmontana.dev</p>
+                  <h3 className="font-medium text-gray-100">{t.contact.email}</h3>
+                  <p className="text-gray-300">contact@endersonmontana.dev</p>
                 </div>
               </motion.div>
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
+                className="flex items-center gap-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
                 whileHover={{ scale: 1.02 }}
               >
-                <Linkedin className="text-cyan-500" />
+                <Linkedin className="text-cyan-400" />
                 <div>
-                  <h3 className="font-medium">{t.contact.linkedin}</h3>
-                  <p className="text-gray-600">linkedin.com/in/endersonmontana</p>
+                  <h3 className="font-medium text-gray-100">{t.contact.linkedin}</h3>
+                  <p className="text-gray-300">linkedin.com/in/endersonmontana</p>
                 </div>
               </motion.div>
               <motion.div 
-                className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:shadow-md transition-shadow"
+                className="flex items-center gap-4 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors"
                 whileHover={{ scale: 1.02 }}
               >
-                <Github className="text-cyan-500" />
+                <Github className="text-cyan-400" />
                 <div>
-                  <h3 className="font-medium">{t.contact.github}</h3>
-                  <p className="text-gray-600">github.com/endersonmontana</p>
+                  <h3 className="font-medium text-gray-100">{t.contact.github}</h3>
+                  <p className="text-gray-300">github.com/endersonmontana</p>
                 </div>
               </motion.div>
             </div>
@@ -166,7 +166,7 @@ function App() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-8">
+      <footer className="bg-gray-900 text-gray-400 py-8 border-t border-gray-800">
         <div className="container mx-auto px-6 text-center">
           <p>{t.footer.copyright}</p>
         </div>

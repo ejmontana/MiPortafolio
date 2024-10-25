@@ -86,9 +86,9 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
             
             <div className="flex gap-4 items-center">
               <motion.a 
-                href="https://github.com" 
+                href="https://github.com/ejmontana" 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="https://github.com/ejmontana" 
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 whileTap={{ scale: 0.9 }}
@@ -96,9 +96,9 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
                 <Github size={24} />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/endersonmontana/" 
                 target="_blank" 
-                rel="noopener noreferrer" 
+                rel="https://www.linkedin.com/in/endersonmontana/" 
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 whileTap={{ scale: 0.9 }}
