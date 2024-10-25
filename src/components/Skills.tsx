@@ -50,21 +50,21 @@ export const Skills: React.FC<SkillsProps> = ({ categories }) => {
           <motion.div
             key={key}
             ref={ref}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow border border-gray-700"
+            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 border border-gray-200 dark:border-gray-700"
             variants={item}
           >
-            <h3 className="text-xl font-semibold mb-4 text-cyan-400">{title}</h3>
+            <h3 className="text-xl font-semibold mb-4 text-cyan-600 dark:text-cyan-400">{title}</h3>
             <div className="space-y-3">
               {skillsList[key as keyof typeof skillsList].map((skill, index) => (
                 <motion.div
                   key={index}
-                  className="bg-gray-700 rounded-full overflow-hidden"
+                  className="bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden"
                   initial={{ width: "0%" }}
                   animate={inView ? { width: "100%" } : { width: "0%" }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                 >
                   <motion.div 
-                    className="bg-cyan-500 text-gray-900 text-sm font-medium py-1 px-4 rounded-full"
+                    className="bg-cyan-500 dark:bg-cyan-400 text-white dark:text-gray-900 text-sm font-medium py-1 px-4 rounded-full"
                     style={{ width: `${85 + Math.random() * 15}%` }}
                     initial={{ x: -100 }}
                     animate={inView ? { x: 0 } : { x: -100 }}

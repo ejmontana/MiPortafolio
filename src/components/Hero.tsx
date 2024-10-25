@@ -88,7 +88,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
               <motion.a 
                 href="https://github.com/ejmontana" 
                 target="_blank" 
-                rel="https://github.com/ejmontana" 
+                rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 whileTap={{ scale: 0.9 }}
@@ -98,7 +98,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
               <motion.a 
                 href="https://www.linkedin.com/in/endersonmontana/" 
                 target="_blank" 
-                rel="https://www.linkedin.com/in/endersonmontana/" 
+                rel="noopener noreferrer" 
                 className="text-gray-400 hover:text-white transition-colors"
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 whileTap={{ scale: 0.9 }}
@@ -124,7 +124,6 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
         </motion.div>
       </motion.div>
 
-      {/* Background Animation */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute -inset-[10px] opacity-50"
