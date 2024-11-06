@@ -10,7 +10,7 @@ import { Github, Linkedin, Mail, Code2, User, Cpu, Send } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 function App() {
-  const [lang, setLang] = useState<'en' | 'es'>('en');
+  const [lang, setLang] = useState<'en' | 'es'>('es');
   const t = translations[lang];
 
   const toggleLanguage = () => {
@@ -139,7 +139,7 @@ function App() {
                 <Mail className="text-cyan-600 dark:text-cyan-400" />
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-gray-100">{t.contact.email}</h3>
-                  <p className="text-gray-600 dark:text-gray-300">contact@endersonmontana.dev</p>
+                  <p className="text-gray-600 dark:text-gray-300">enderson_josep@hotmail.com</p>
                 </div>
               </motion.div>
               <motion.div 

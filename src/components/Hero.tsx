@@ -74,7 +74,7 @@ export const Hero: React.FC<HeroProps> = ({ content }) => {
             </motion.a>
             
             <motion.a 
-              href="/Enderson-Montana-CV.pdf" 
+              href="/EndersonMontañaCV.pdf" 
               download
               className="bg-gray-700 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-medium transition-colors flex items-center gap-2"
               whileHover={{ scale: 1.05 }}
